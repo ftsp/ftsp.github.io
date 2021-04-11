@@ -1,0 +1,87 @@
+.page-title-home h1 {
+  color: rgb(255, 255, 255);
+  width: 100%;
+  text-align: center;
+  animation: glowLight 4s linear forwards;
+  position: relative;
+}
+
+.page-title-home h1::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-text-stroke: 1px rgba(250, 250, 250, 0.4);
+}
+
+@keyframes glowLight {
+  0%,
+  18%,
+  20%,
+  50.1%,
+  60%,
+  65.1%,
+  80.1%,
+  90.1%,
+  92% {
+    color: rgba(71, 71, 71, 0);
+    text-shadow: none;
+  }
+  18.1%,
+  20.1%,
+  30%,
+  50%,
+  60.1%,
+  65%,
+  80.1%,
+  90%,
+  92.1%,
+  100% {
+    color: rgb(250, 250, 250);
+    text-shadow: 0 0 10px rgba(48, 224, 255, 0.3),
+      0 0 15px rgba(48, 224, 255, 0.2), 0 0 20px rgba(48, 224, 255, 0.1);
+  }
+}
+
+.page-title-home p,
+.page-title-home ul,
+.page-title-home .hr1,
+.page-title-home .hr2,
+.page-title-home .social-links {
+  opacity: 0;
+  animation: textAnim 2.6s linear forwards;
+}
+
+.page-title-home hr {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 4vh;
+  border: 0.1px solid rgba(245, 245, 245, 0.4);
+}
+
+.page-title-home .hr1 {
+  animation-delay: 0.5s;
+}
+
+.page-title-home p {
+  animation-delay: 1s;
+}
+.page-title-home ul {
+  animation-delay: 1.5s;
+}
+.page-title-home .hr2 {
+  animation-delay: 2s;
+}
+.page-title-home .social-links {
+  animation-delay: 2.5s;
+}
+
+@keyframes textAnim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

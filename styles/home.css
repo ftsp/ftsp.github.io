@@ -1,0 +1,69 @@
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-title-home {
+  text-align: center;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.page-title-home h1 {
+  font-size: 6rem;
+  font-weight: bolder;
+  /* font-family: "Josefin Sans", sans-serif; */
+  letter-spacing: 2px;
+  line-height: 100%;
+}
+
+.page-title-home h1::before {
+  content: attr(data-text);
+  position: absolute;
+}
+
+.page-title-home p {
+  font-size: 1.6rem;
+  font-weight: 100;
+}
+
+.page-title-home ul {
+  width: 15%;
+  text-align: left;
+}
+
+.page-title-home ul li {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  align-items: center;
+  font-size: 1.2rem;
+  transform: translateX(10px);
+}
+
+.page-title-home ul .ul-head {
+  font-size: 1.4rem;
+  padding-bottom: 5px;
+  transform: translateX(-20px);
+}
+
+.social-links {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.social-links .social-link {
+  cursor: pointer;
+  font-size: 4rem;
+}
+
+.social-links .social-link i {
+  transition: color 200ms ease-in-out;
+}

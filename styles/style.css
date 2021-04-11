@@ -1,0 +1,128 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: aliceblue;
+  text-decoration: none;
+  list-style: none;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+}
+
+nav {
+  width: 5vw;
+  height: 100vh;
+}
+
+.nav-bar {
+  width: 5vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 10;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-button {
+  margin-top: 80vh;
+  cursor: pointer;
+}
+.nav-links {
+  width: 30vw;
+  background: linear-gradient(
+    90deg,
+    #000,
+    rgba(0, 0, 0, 0.76),
+    rgba(0, 0, 0, 0)
+  );
+  height: 100vh;
+  position: absolute;
+  transform: translateX(-30vw);
+  transition: transform 200ms ease-in-out;
+  z-index: 9;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links ul {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 5vh;
+}
+
+.nav-links ul li a {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.nav-move {
+  transform: translateX(5vw);
+}
+
+.content {
+  width: 95vw;
+  /* background: url("../src/background.jpg"); */
+  background: radial-gradient(circle at center, rgb(39, 39, 39), black);
+
+  background-size: cover;
+  transition: 200ms ease-in-out;
+}
+
+.content .pages {
+  transition: transform 500ms ease-in-out;
+  transition-delay: 200ms;
+}
+.content .pages .page {
+  height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.content .pages .page::-webkit-scrollbar {
+  width: 5px;
+}
+
+.content .pages .page::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.content-filter {
+  filter: brightness(15%);
+}
+
+.page-title {
+  font-size: 6rem;
+  font-weight: bolder;
+  text-align: right;
+  /* font-family: "Josefin Sans", sans-serif; */
+  letter-spacing: 2px;
+  line-height: 100%;
+  margin: 40px 50px 0 0;
+}
+
+
+.b-anim .line2 {
+  opacity: 0;
+}
+
+.b-anim .line1 {
+  transform: rotate(45deg) translate(5px, 4px);
+}
+
+.b-anim .line3 {
+  transform: rotate(-45deg) translate(5px, -4px);
+}
